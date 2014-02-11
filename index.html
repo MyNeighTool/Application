@@ -85,38 +85,6 @@
 				map.setCenter(options.position);
 			}
 			google.maps.event.addDomListener(window, 'load', initialize);*/
-			 var geocoder;
-			  var map;
-			  var infowindow = new google.maps.InfoWindow();
-			  var marker;
-			  function initialize() {
-			    geocoder = new google.maps.Geocoder();
-			    var latlng = new google.maps.LatLng(40.730885,-73.997383);
-			    var mapOptions = {
-			      zoom: 10,
-			      center: latlng
-			    }
-			    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-			  }
-
-			  function codeLatLng() {
-			    var latlng = new google.maps.LatLng(40.730885,-73.997383);
-			    geocoder.geocode({'latLng': latlng}, function(results, status) {
-			      if (status == google.maps.GeocoderStatus.OK) {
-			        if (results[1]) {
-			          map.setZoom(15);
-			          marker = new google.maps.Marker({
-			              position: latlng,
-			              map: map
-			          });
-			          infowindow.setContent(results[1].formatted_address);
-			          infowindow.open(map, marker);
-			        }
-			      } else {
-			        alert("Geocoder failed due to: " + status);
-			      }
-			    });
-			  }
 		</script>
 	</head>
 	
@@ -149,14 +117,20 @@
 	
 		<div class="jumbotron">
 			<div class="container">
-				<h1>Hello, world!</h1>
-				<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-				<p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+				<div class="row">
+					<div class="col-md-6" id="map-canvas" style="background-color:#DDD;"></div>
+					<div class="col-md-1"></div>
+					<div class="col-md-5">
+						<h3>Créez un compte gratuitement</h3>
+						<h4>Afin de pouvoir échanger dès maintenant près de chez vous !</h4>
+						<p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8" id="map-canvas" style="background-color:#DDD;">
+				<div class="col-md-8">
 				</div>
 				<div class="col-md-4">
 					<h2>Heading</h2>
