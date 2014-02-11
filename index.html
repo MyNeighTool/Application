@@ -1,9 +1,9 @@
 <!doctype html>
 <html ng-app="myNeighTool" lang="en">
-	<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ng-app: docsApp;" lang="en" ng-controller="DocsController"> <![endif]-->
-	<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ng-app: docsApp;" lang="en" ng-controller="DocsController"> <![endif]-->
-	<!--[if IE 8]>    <html class="no-js lt-ie9 ng-app: docsApp;" lang="en" ng-controller="DocsController"> <![endif]-->
-	<!--[if gt IE 8]><!--> <html class="no-js ng-app: docsApp;" lang="en" ng-controller="DocsController"> <!--<![endif]-->
+	<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ng-app: myNeighTool;" lang="en" ng-controller="SiteConstantsListCtrl"> <![endif]-->
+	<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8 ng-app: myNeighTool;" lang="en" ng-controller="SiteConstantsListCtrl"> <![endif]-->
+	<!--[if IE 8]> <html class="no-js lt-ie9 ng-app: myNeighTool;" lang="en" ng-controller="SiteConstantsListCtrl"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js ng-app: myNeighTool;" lang="en" ng-controller="SiteConstantsListCtrl"> <!--<![endif]-->
 	<head>
 		</script> <meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -88,7 +88,7 @@
 		</script>
 	</head>
 	
-	<body onload="initialize()" ng-controller="myNeighTool">
+	<body onload="initialize()" ng-controller="SiteConstantsListCtrl">
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
@@ -98,7 +98,7 @@
 							class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">{{constants.siteName}}</a>
+					<a class="navbar-brand" href="#" ng-repeat="constant in constants">{{constant.siteName}}</a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<form class="navbar-form navbar-right" role="form">
