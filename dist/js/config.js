@@ -11,12 +11,12 @@ var myNeighTool = angular.module('myNeighTool', []);
     
     $scope.botmenu = [
 	{
-    	'menuLink' = 'index.html',
-    	'menuName' = 'Index'
+    	'linkUrl' = 'index.html',
+    	'linkName' = 'Index'
     },
     {
-    	'menuLink' = 'contact.html',
-    	'menuName' = 'Contact'
+    	'linkUrl' = 'contact.html',
+    	'linkName' = 'Contact'
     }];
     
 });
