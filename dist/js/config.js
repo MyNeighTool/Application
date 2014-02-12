@@ -6,7 +6,7 @@ var myNeighTool = angular.module('myNeighTool', []);
     $scope.constants = [{
     	'siteName': 'MyNeighTool',
     	'siteSlogan': 'Pretez avec vos voisin',
-    	'siteMainPage': 'index.html'
+    	'siteMainPage': 'dashboard.html'
     }];
     
     $scope.botmenu = [
