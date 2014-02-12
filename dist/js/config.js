@@ -1,5 +1,3 @@
-'use strict';
-
 var myNeighTool = angular.module('myNeighTool', []);
      
 	myNeighTool.controller('SiteConstantsListCtrl', function ($scope) {
@@ -11,12 +9,12 @@ var myNeighTool = angular.module('myNeighTool', []);
     
     $scope.botmenu = [
 	{
-    	'linkUrl' = 'index.html',
-    	'linkName' = 'Index'
+    	'linkUrl': 'index.html',
+    	'linkName': 'Index'
     },
     {
-    	'linkUrl' = 'contact.html',
-    	'linkName' = 'Contact'
+    	'linkUrl': 'contact.html',
+    	'linkName': 'Contact'
     }];
     
 });
