@@ -1,0 +1,124 @@
+<!doctype html>
+<html ng-app="myNeighTool" lang="en">
+	<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ng-app: myNeighTool;" lang="en" ng-controller="SiteConstantsListCtrl"> <![endif]-->
+	<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8 ng-app: myNeighTool;" lang="en" ng-controller="SiteConstantsListCtrl"> <![endif]-->
+	<!--[if IE 8]> <html class="no-js lt-ie9 ng-app: myNeighTool;" lang="en" ng-controller="SiteConstantsListCtrl"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js ng-app: myNeighTool;" lang="en" ng-controller="SiteConstantsListCtrl"> <!--<![endif]-->
+	<head>
+		</script> <meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="description" content="">
+    	<meta name="author" content="">
+		<link rel="icon" type="image/png" href="./dist/img/favicon.png" />
+	
+	    <title>MyNeighTool</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="./dist/css/jumbotron.css" rel="stylesheet">
+	
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-animate.js"></script>
+	    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	    <script src="./dist/js/bootstrap.min.js"></script>
+	    <script src="./dist/js/config.js"></script>
+	
+	    <!-- Just for debugging purposes. Don't actually copy this line! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    
+	</head>
+	
+	<body onload="initialize()" ng-controller="SiteConstantsListCtrl">
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href={{constant.siteMainPage}} ng-repeat="constant in constants">{{constant.siteName}}</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<form class="navbar-form navbar-right" role="form">
+						<div class="form-group">
+							<input type="text" placeholder="Nom d'utilisateur" id="login_nickname" name="login_nickname" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="password" placeholder="Mot de passe" id="login_password" name="login_password" class="form-control">
+						</div>
+						<button type="submit" class="btn btn-success">Connexion</button>
+					</form>
+				</div>
+				<!--/.navbar-collapse -->
+			</div>
+		</div>
+	
+		<div class="container" style="margin-top:30px;">			
+<h1>Conditions générales d'utilisation (CGU)</h1>
+
+<p>Le présent document a pour objet de définir les modalités et conditions dans lesquelles d’une part, MyNeighTool, met à la disposition de ses utilisateurs le site, et les services disponibles sur le site et d’autre part, la manière par laquelle l’utilisateur accède au site et utilise ses services.</p>
+<p>Toute connexion au site est subordonnée au respect des présentes conditions.</p>
+<p>Pour l’utilisateur, le simple accès au site de MyNeighTool implique l’acceptation de l’ensemble des conditions décrites ci-après.</p>
+
+<h2>1) Propriété intellectuelle</h2>
+<p>La structure générale du site MyNeighTool, ainsi que les textes, graphiques, images, sons et  vidéos la composant, sont la propriété de l'éditeur ou de ses partenaires. Toute représentation et/ou reproduction et/ou exploitation partielle ou totale des contenus et services proposés par le site MyNeighTool, par quelque procédé que ce soit, sans l'autorisation préalable et par écrit d’un administrateur est strictement interdite et serait susceptible de constituer une contrefaçon au sens des articles L 335-2 et suivants du Code de la propriété intellectuelle.</p>
+
+<h2>2) Liens hypertextes</h2>
+<p>Le site MyNeighTool peut contenir des liens hypertextes vers d’autres sites présents sur le réseau Internet. Les liens vers ces autres ressources vous font quitter le site MyNeighTool.
+Il est possible de créer un lien vers la page de présentation de ce site sans autorisation expresse de MyNeighTool. Aucune autorisation ou demande d’information préalable ne peut être exigée par l’éditeur à l’égard d’un site qui souhaite établir un lien vers le site de l’éditeur. Il convient toutefois d’afficher ce site dans une nouvelle fenêtre du navigateur. Cependant, MyNeighTool se réserve le droit de demander la suppression d’un lien qu’il estime non conforme à l’objet du site.</p>
+
+<h2>3) Responsabilité de l’éditeur</h2>
+<p>Les informations et/ou documents figurant sur ce site et/ou accessibles par ce site proviennent de sources considérées comme étant fiables.
+Toutefois, ces informations et/ou documents sont susceptibles de contenir des inexactitudes techniques et des erreurs typographiques.
+MyNeighTool se réserve le droit de les corriger, dès que ces erreurs sont portées à sa connaissance.</p>
+<p>Il est fortement recommandé de vérifier l’exactitude et la pertinence des informations et/ou documents mis à disposition sur ce site.
+Les informations et/ou documents disponibles sur ce site sont susceptibles d’être modifiés à tout moment, et peuvent avoir fait l’objet de mises à jour. En particulier, ils peuvent avoir fait l’objet d’une mise à jour entre le moment de leur téléchargement et celui où l’utilisateur en prend connaissance.
+L’utilisation des informations et/ou documents disponibles sur ce site se fait sous l’entière et seule responsabilité de l’utilisateur, qui assume la totalité des conséquences pouvant en découler, sans que MyNeighTool puisse être recherché à ce titre, et sans recours contre ce dernier.
+MyNeighTool ne pourra en aucun cas être tenu responsable de tout dommage de quelque nature qu’il soit résultant de l’interprétation ou de l’utilisation des informations et/ou documents disponibles sur ce site.</p>
+
+<h2>4) Accès au site</h2>
+<p>MyNeighTool s’efforce de permettre l’accès au site 24 heures sur 24, 7 jours sur 7, sauf en cas de force majeure ou d’un événement hors du contrôle de MyNeighTool, et sous réserve des éventuelles pannes et interventions de maintenance nécessaires au bon fonctionnement du site et des services.</p>
+<p>Par conséquent, MyNeighTool ne peut garantir une disponibilité du site et/ou des services, une fiabilité des transmissions et des performances en terme de temps de réponse ou de qualité. Il n’est prévu aucune assistance technique vis à vis de l’utilisateur que ce soit par des moyens électronique ou téléphonique.
+La responsabilité de l’éditeur ne saurait être engagée en cas d’impossibilité d’accès à ce site et/ou d’utilisation des services.</p>
+<p>Par ailleurs, MyNeighTool peut être amené à interrompre le site ou une partie des services, à tout moment sans préavis, le tout sans droit à indemnités. L’utilisateur reconnaît et accepte que MyNeighTool ne soit pas responsable des interruptions, et des conséquences qui peuvent en découler pour l’utilisateur ou tout tiers.</p>
+
+<h2>5) Modification des conditions d’utilisation</h2>
+<p>MyNeighTool se réserve la possibilité de modifier, à tout moment et sans préavis, les présentes conditions d’utilisation afin de les adapter aux évolutions du site et/ou de son exploitation.</p>
+
+<h2>6) Règles d'usage d'Internet</h2>
+<p>L’utilisateur déclare accepter les caractéristiques et les limites d’Internet, et notamment reconnaît que :
+<ul>
+    <li>MyNeighTool n’assume aucune responsabilité sur les services accessibles par Internet et n’exerce aucun contrôle de quelque forme que ce soit sur la nature et les caractéristiques des données qui pourraient transiter par l’intermédiaire de son centre serveur.</li>
+    <li>L’utilisateur reconnaît que les données circulant sur Internet ne sont pas protégées notamment contre les détournements éventuels. La présence du logo MyNeighTool institue une présomption simple de validité. La communication de toute information jugée par l’utilisateur de nature sensible ou confidentielle se fait à ses risques et périls.</li>
+    <li>L’utilisateur reconnaît que les données circulant sur Internet peuvent être réglementées en termes d’usage ou être protégées par un droit de propriété.</li>
+    <li>L’utilisateur est seul responsable de l’usage des données qu’il consulte, interroge et transfère sur Internet.</li>
+    <li>L’utilisateur reconnaît que MyNeighTool ne dispose d’aucun moyen de contrôle sur le contenu des services accessibles sur Internet.</li>
+</ul>
+    </p>
+
+<h2>7) Droit applicable</h2>
+<p>Tant le présent site que les modalités et conditions de son utilisation sont régis par le droit français, quel que soit le lieu d’utilisation. En cas de contestation éventuelle, et après l’échec de toute tentative de recherche d’une solution amiable, les tribunaux français seront seuls compétents pour connaître de ce litige.
+Pour toute question relative aux présentes conditions d’utilisation du site, vous pouvez nous écrire à l’adresse suivante : <a href="mailto:myneightool@gmail.com">myneightool@gmail.com</a></p>
+
+<p>Les présentes conditions générales (CGU) sont une reproduction intégrale ou partielle du Modèle de CGU (conditions générales d'utilisation) d'un site Internet, dont le titulaire des droits d'auteur est DROITISSIMO.COM, site internet d'information juridique grand public.</p>
+		
+				
+				
+		</div>
+		
+		<div class="container">
+			<footer>
+				<p>Copyrights &copy; MyNeighTool 2014</p>
+			</footer>
+		</div>
+	</body>
+</html>
