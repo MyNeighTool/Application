@@ -66,6 +66,8 @@
 		<div class="container" style="margin-top:30px;">
 			<div class="col-md-3 well">
 				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#" data-toggle="modal" data-target="#newMessageModal"><span class="glyphicon glyphicon-envelope"></span> Nouveau message</a></li>
+					<hr />
 					<li class="active"><a href="#"><span class="glyphicon glyphicon-inbox"></span> Boite de réception <span class="badge pull-right">0</span></a></li>
 					<li><a href="#">Messages envoyés</a></li>
 				</ul>
@@ -86,11 +88,17 @@
 								<th style="text-align:center;" width="15%">Actions</th>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody id="accordion">
 							<tr style="vertical-align:middle;">
 								<td class="perfectCenter">Utilisateur 1</td>
 								<td class="perfectCenter">
-									<strong><a href="#">Objet test numéro 1</a></strong>
+									<strong><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Objet test numéro 1</a></strong>
+									<div id="collapseOne" class="panel-collapse collapse">
+										<hr />
+										<div style="text-align:justify !important">
+											Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+										</div>
+									</div>
 								</td>
 								<td class="perfectCenter">il y a 28 minutes</td>
 								<td class="perfectCenter">
@@ -103,7 +111,13 @@
 							<tr style="vertical-align:middle;">
 								<td class="perfectCenter">Utilisateur 1</td>
 								<td class="perfectCenter">
-									<strong><a href="#">Objet test numéro 1</a></strong>
+									<strong><a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Objet test numéro 1</a></strong>
+									<div id="collapseFour" class="panel-collapse collapse">
+										<hr />
+										<div style="text-align:justify !important">
+											Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+										</div>
+									</div>
 								</td>
 								<td class="perfectCenter">il y a 8 heures</td>
 								<td class="perfectCenter">
@@ -116,7 +130,13 @@
 							<tr style="vertical-align:middle;">
 								<td class="perfectCenter">Utilisateur 3</td>
 								<td class="perfectCenter">
-									<strong><a href="#">Objet test numéro 52</a></strong>
+									<strong><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Objet test numéro 1</a></strong>
+									<div id="collapseTwo" class="panel-collapse collapse">
+										<hr />
+										<div style="text-align:justify !important">
+											Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+										</div>
+									</div>
 								</td>
 								<td class="perfectCenter">il y a 2 semaines</td>
 								<td class="perfectCenter">
@@ -129,7 +149,13 @@
 							<tr style="vertical-align:middle;">
 								<td class="perfectCenter">Utilisateur 64</td>
 								<td class="perfectCenter">
-									<strong><a href="#">Objet test numéro 7</a></strong>
+									<strong><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Objet test numéro 1</a></strong>
+									<div id="collapseThree" class="panel-collapse collapse">
+										<hr />
+										<div style="text-align:justify !important">
+											Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+										</div>
+									</div>
 								</td>
 								<td class="perfectCenter">28/01/2014</td>
 								<td class="perfectCenter">
@@ -154,7 +180,44 @@
 				</div>
 			</div>
 		</div>
-	
+
+		<div class="modal fade" id="newMessageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Composer un nouveau message</h4>
+					</div>
+					<form action="#" class="form-horizontal" role="form">
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="userTo" class="col-sm-3 control-label">Destinataire</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="userTo" placeholder="Nom d'utilisateur du destinataire" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="subjectTo" class="col-sm-3 control-label">Sujet</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" id="subjectTo" placeholder="Sujet du message" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="messageTo" class="col-sm-3 control-label">Message</label>
+								<div class="col-sm-9">
+									<textarea class="form-control" rows="10" id="messageTo" placeholder="Entrez votre message"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+							<button type="button" class="btn btn-info">Envoyer</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
 		<div class="container">
 			<hr />
 			<footer>
