@@ -19,6 +19,27 @@ if(request.getParameter("id") != null) {
 %>
 
 <% if(itemFound) { %>
+	<script src="./dist/js/bootstrap-datepicker.js" charset="UTF-8"></script>
+	<script src="./dist/js/bootstrap-datepicker.fr.js" charset="UTF-8"></script>
+	<script type="text/javascript">
+	$(document).ready(function () {
+		$('.input-daterange').datepicker({
+			format: "dd/mm/yyyy",
+			language: "fr",
+			todayBtn: "linked"
+		});
+	});
+	</script>
+	<link href="./dist/css/datepicker.css" rel="stylesheet">
+	<div class="row">
+		<div class="col-md-12">
+			<ol class="breadcrumb">
+				<li><a href="javascript:history.go(-1)">&laquo; Retour</a></li>
+				<li><a href="#"><%=itemCategory%></a></li>
+				<li class="active"><%=itemName%></li>
+			</ol>
+		</div>
+	</div>
 	<div class="row">
 		<div class="col-md-4">
 			<div class="row">
@@ -28,7 +49,10 @@ if(request.getParameter("id") != null) {
 			</div>
 		</div>
 		<div class="col-md-8">
-			<h4><%=itemName%></h4>
+			<h4>
+				<%=itemName%>
+				<a class="btn btn-danger pull-right btn-xs"><i class="glyphicon glyphicon-warning-sign"></i> Signaler cet objet</a>
+			</h4>
 			<hr />
 			<style>
 				.tableTmp{padding-right:3px; text-align:right; font-weight:bold;vertical-align:top}
@@ -36,12 +60,12 @@ if(request.getParameter("id") != null) {
 			<table width="100%">
 				<tr>
 					<td class="tableTmp" width="30%">Vendeur : </td>
-					<td width="70%"><%=itemVendor%></td>
+					<td width="70%"><a href="#" data-toggle="modal" data-target="#userProfile"><%=itemVendor%></a></td>
 				</tr>
 				<tr><td>&nbsp;</td></tr>
 				<tr>
 					<td class="tableTmp">Catégorie : </td>
-					<td><%=itemCategory%></td>
+					<td><a href="#"><%=itemCategory%></a></td>
 				</tr>
 				<tr><td>&nbsp;</td></tr>
 				<tr>
@@ -59,8 +83,41 @@ if(request.getParameter("id") != null) {
 					<td><%=itemPrice%></td>
 				</tr>
 			</table>
+			<hr />
+			<a href="#" data-toggle="modal" data-target="#confirmBorrow" class="btn btn-success pull-right btn-lg"><i class="glyphicon glyphicon-shopping-cart"></i> Demander l'emprunt de l'objet</a>
+		</div>
+		<jsp:include page="profile.jsp">
+			<jsp:param value="1" name="userId"/>
+		</jsp:include>
+		<div class="modal fade" id="confirmBorrow" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<form action="#" method="POST">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel">Demande d'emprunt</h4>
+						</div>
+						<div class="modal-body">
+							<strong>Objet concerné :</strong><br /> 
+							<%=itemName%><br /><br />
+							<strong>Période désirée :</strong><br />
+							<div id="datepicker">
+								<div class="input-daterange input-group" id="datepicker">
+									<span class="input-group-addon">du </span> <input type="text" data-provide="datepicker" class="datepicker input-sm form-control" name="start" required/> 
+									<span class="input-group-addon"> au </span> <input type="text" data-provide="datepicker" class="datepicker input-sm form-control" name="end" required/>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal"><i class="glyphicon glyphicon-remove"></i> Annuler</button>
+							<button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-ok"></i> Confirmer la demande</button>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
+	
 <% } else { %>
 	<div class="row">
 		<div class="col-md-12 alert alert-danger perfectCenter">

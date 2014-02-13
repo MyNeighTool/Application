@@ -1,10 +1,14 @@
+	    		<script src="./dist/js/bootstrap-datepicker.js" charset="UTF-8"></script>
 				<script src="./dist/js/bootstrap-datepicker.fr.js" charset="UTF-8"></script>
-	    		<script src="./dist/js/bootstrap-datepicker.js" charset="UTF-8">
-	    			$('.datepicker').datepicker({
-	    				format: 'mm/dd/yyyy',	
-	    				language: "fr"
-	    			});
-	    		</script>
+				<script type="text/javascript">
+				$(document).ready(function () {
+					$('.input-daterange').datepicker({
+						format: "dd/mm/yyyy",
+						language: "fr",
+						todayBtn: "linked"
+					});
+				});
+				</script>
 		    	<link href="./dist/css/datepicker.css" rel="stylesheet">
 				<ol class="breadcrumb">
 					<li><a href="dashboard.jsp">Accueil</a></li>
@@ -43,8 +47,8 @@
 							<label for="itemDetails" class="col-sm-3 control-label">Disponibilité</label>
 							<div class="col-sm-6" id="datepicker">
 								<div class="input-daterange input-group" id="datepicker">
-									<span class="input-group-addon">du </span> <input type="text" class="datepicker input-sm form-control" name="start" /> 
-									<span class="input-group-addon"> au </span> <input type="text" class="datepicker input-sm form-control" name="end" />
+									<span class="input-group-addon">du </span> <input type="text" data-provide="datepicker" class="datepicker input-sm form-control" name="start" /> 
+									<span class="input-group-addon"> au </span> <input type="text" data-provide="datepicker" class="datepicker input-sm form-control" name="end" />
 								</div>
 							</div>
 						</div>
@@ -71,7 +75,7 @@
 						<hr />
 						<div class="form-group">
 							<div class="col-sm-12">
-								<input type="checkbox" id="terms" /> <label for="terms">En mettant cet objet, je m'engage à respecter les <a href="#">conditions générales d'utilisation</a>.</label>
+								<input type="checkbox" id="termsofuse" name="termsofuse" /> <label for="terms">En mettant cet objet, je m'engage à respecter les <a href="#" data-toggle="modal" data-target="#terms">conditions générales d'utilisation</a>.</label>
 							</div>
 						</div>
 						<div class="pull-right">
