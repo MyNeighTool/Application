@@ -50,7 +50,7 @@
 						</div>
 					</form>
 					<ul class="nav navbar-nav navbar-right">
-	        			<li><a href="#">Ajouter un objet</a></li>
+	        			<li><a href="dashboard.jsp?page=addItem">Ajouter un objet</a></li>
 	        			<li><a href="dashboard.jsp?page=mailbox">Mes messages <span class="badge">0</span></a></li>
         				<li><a href="#">Mon compte</a></li>
         				<li><a href="#">Déconnexion</a></li>

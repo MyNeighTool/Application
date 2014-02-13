@@ -1,9 +1,13 @@
 <%
 String subInclude = "mailboxMain.jsp";
+String menuMainActive = "active";
+String menuSentActive = "";
 if(request.getParameter("sub") !=null) {
 	String sub = (String)request.getParameter("sub");
 	if(sub.equals("sent")) {
 		subInclude = "mailboxSent.jsp";
+		menuMainActive = "";
+		menuSentActive = "active";
 	}
 }
 %>
@@ -12,8 +16,8 @@ if(request.getParameter("sub") !=null) {
 			<ul class="nav nav-pills nav-stacked">
 				<li><a href="#" data-toggle="modal" data-target="#newMessageModal"><span class="glyphicon glyphicon-envelope"></span> Nouveau message</a></li>
 				<hr />
-				<li><a href="dashboard.jsp?page=mailbox"><span class="glyphicon glyphicon-inbox"></span> Boite de réception <span class="badge pull-right">0</span></a></li>
-				<li><a href="dashboard.jsp?page=mailbox&sub=sent">Messages envoyés</a></li>
+				<li class="<%=menuMainActive%>"><a href="dashboard.jsp?page=mailbox"><span class="glyphicon glyphicon-inbox"></span> Boite de réception <span class="badge pull-right">0</span></a></li>
+				<li class="<%=menuSentActive%>"><a href="dashboard.jsp?page=mailbox&sub=sent">Messages envoyés</a></li>
 			</ul>
 		</div> 
 		<div class="col-md-9">
