@@ -35,8 +35,6 @@ if(request.getParameter("attemp") != null){
 	    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
 	    <link href="./dist/css/jumbotron.css" rel="stylesheet">
 	
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular-animate.js"></script>
 	    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	    <script src="./dist/js/bootstrap.min.js"></script>
 	    <script src="./dist/js/config.js"></script>
@@ -58,7 +56,7 @@ if(request.getParameter("attemp") != null){
 		</style>
 	</head>
 	
-	<body>
+	<body onload="initialize()">
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">

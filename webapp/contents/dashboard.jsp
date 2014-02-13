@@ -1,10 +1,5 @@
 			<div class="col-md-3 well">
 				<ul class="nav nav-pills nav-stacked">
-					<li><a href="#">Mes demandes <span class="badge pull-right">0</span></a></li>
-					<li><a href="#">Mes objets a emprunter <span class="badge pull-right">0</span></a></li>
-				</ul>
-				<hr />
-				<ul class="nav nav-pills nav-stacked">
 					<li class="active"><a href="#">Objets populaires dans ma région</a></li>
 				</ul>
 				<hr />

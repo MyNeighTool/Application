@@ -1,14 +1,13 @@
-			<div class="col-md-3 well">
-				<ul class="nav nav-pills nav-stacked">
-					<li><a href="#"><span class="glyphicon glyphicon-list"></span>
-							Mes objets disponibles <span class="badge pull-right">0</span></a></li>
-					<li class="active"><a href="#"><span
-							class="glyphicon glyphicon-plus"></span> Ajouter un objet</a></li>
-				</ul>
-			</div>
-			<div class="col-md-9">
+				<script src="./dist/js/bootstrap-datepicker.fr.js" charset="UTF-8"></script>
+	    		<script src="./dist/js/bootstrap-datepicker.js" charset="UTF-8">
+	    			$('.datepicker').datepicker({
+	    				format: 'mm/dd/yyyy',	
+	    				language: "fr"
+	    			});
+	    		</script>
+		    	<link href="./dist/css/datepicker.css" rel="stylesheet">
 				<ol class="breadcrumb">
-					<li><a href="#">Accueil</a></li>
+					<li><a href="dashboard.jsp">Accueil</a></li>
 					<li class="active">Ajout d'un nouvel objet à prêter</li>
 				</ol>
 			
@@ -44,10 +43,8 @@
 							<label for="itemDetails" class="col-sm-3 control-label">Disponibilité</label>
 							<div class="col-sm-6" id="datepicker">
 								<div class="input-daterange input-group" id="datepicker">
-									<span class="input-group-addon">du </span> <input type="text"
-										class="input-sm form-control" name="start" /> <span
-										class="input-group-addon"> au </span> <input type="text"
-										class="input-sm form-control" name="end" />
+									<span class="input-group-addon">du </span> <input type="text" class="datepicker input-sm form-control" name="start" /> 
+									<span class="input-group-addon"> au </span> <input type="text" class="datepicker input-sm form-control" name="end" />
 								</div>
 							</div>
 						</div>
@@ -82,4 +79,3 @@
 						</div>
 					</div>
 				</form>
-			</div>

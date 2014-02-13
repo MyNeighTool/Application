@@ -1,5 +1,5 @@
 <ol class="breadcrumb">
-	<li><a href="#">Accueil</a></li>
+	<li><a href="dashboard.jsp">Accueil</a></li>
 	<li class="active">Boite d'envoi (les messages ne sont conservés que 30 jours)</li>
 </ol>
 

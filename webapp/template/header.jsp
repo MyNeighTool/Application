@@ -49,8 +49,8 @@
 							<input type="text" class="form-control" placeholder="Rechercher">
 						</div>
 					</form>
-					<ul class="nav navbar-nav navbar-right">
-	        			<li><a href="dashboard.jsp?page=addItem">Ajouter un objet</a></li>
+					<ul class="nav navbar-nav navbar-right" style="margin-right:2px;">
+	        			<li><a href="dashboard.jsp?page=manageItems">Gérer mes objets</a></li>
 	        			<li><a href="dashboard.jsp?page=mailbox">Mes messages <span class="badge">0</span></a></li>
         				<li><a href="#">Mon compte</a></li>
         				<li><a href="#">Déconnexion</a></li>

@@ -1,7 +1,7 @@
 
 
 <ol class="breadcrumb">
-	<li><a href="#">Accueil</a></li>
+	<li><a href="dashboard.jsp">Accueil</a></li>
 	<li class="active">Boite de réception (4/50 messages)</li>
 </ol>
 
