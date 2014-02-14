@@ -48,12 +48,8 @@ if(request.getParameter("attemp") != null){
 	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	    <![endif]-->
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsO96nmOiM5A5mef1oNv4PZoETDWvfJ88&sensor=false">
-			
-		</script>
-		<style type="text/css">
-			#map-canvas { height: 600px !important; }
-		</style>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsO96nmOiM5A5mef1oNv4PZoETDWvfJ88&sensor=false"></script>
+		<style type="text/css">#map-canvas{height:600px !important;}</style>
 	</head>
 	
 	<body onload="initialize()">
@@ -70,10 +66,10 @@ if(request.getParameter("attemp") != null){
 				<div class="navbar-collapse collapse">
 					<form action="index.jsp?attemp=1" method="POST" class="navbar-form navbar-right">
 						<div class="form-group">
-							<input type="text" placeholder="Nom d'utilisateur" id="login_nickname" name="login_nickname" class="form-control">
+							<input type="text" placeholder="Nom d'utilisateur" id="login_username" name="login_username" class="form-control" required>
 						</div>
 						<div class="form-group">
-							<input type="password" placeholder="Mot de passe" id="login_password" name="login_password" class="form-control">
+							<input type="password" placeholder="Mot de passe" id="login_password" name="login_password" class="form-control" required>
 						</div>
 						<input type="hidden" name="signIn" id="signIn">
 						<button type="submit" class="btn btn-success">Connexion</button>
@@ -102,14 +98,14 @@ if(request.getParameter("attemp") != null){
 						<form action="index.jsp?attemp=1" method="POST">
 							<div class="row">
 								<div class="col-md-6">
-									<input type="text" placeholder="Prénom" id="firstname" name="firstname" class="form-control" required="required"/>
+									<input type="text" placeholder="Nom" id="firstname" name="firstname" class="form-control" required="required"/>
 								</div>
 								<div class="col-md-6">
-									<input type="text" placeholder="Nom" id="lastname" name="last" class="form-control" required="required"/>
+									<input type="text" placeholder="Prénom" id="lastname" name="last" class="form-control" required="required"/>
 								</div>
 								<div class="col-md-12">
 									<br />
-									<input type="text" placeholder="Nom d'utilisateur" id="nickname" name="nickname" class="form-control" required="required"/>
+									<input type="text" placeholder="Nom d'utilisateur" id="username" name="username" class="form-control" required="required"/>
 									<br />
 									<input type="email" placeholder="Adresse email" id="email" name="email" class="form-control" required="required"/>
 									<br />

@@ -2,7 +2,9 @@
 String subInclude = "mailboxMain.jsp";
 String menuMainActive = "active";
 String menuSentActive = "";
-if(request.getParameter("sub") !=null) {
+boolean newMessageHidden = true;
+String newMessageTo = "";
+if(request.getParameter("sub") != null) {
 	String sub = (String)request.getParameter("sub");
 	if(sub.equals("sent")) {
 		subInclude = "mailboxSent.jsp";
@@ -10,8 +12,21 @@ if(request.getParameter("sub") !=null) {
 		menuSentActive = "active";
 	}
 }
+if(request.getParameter("userId") != null) {
+	newMessageHidden = false;
+	/** TODO **/
+	/* Récupérer le nom d'utilisateur */
+	newMessageTo = "Utilisateur 1";
+}
 %>
-
+		<% if(!newMessageHidden) { %>
+		<script type="text/javascript">
+		    $(document).ready(function () {
+		        $('#newMessageModal').modal('show');
+		    });
+		</script>
+		<% } %>
+		
 		<div class="col-md-3 well">
 			<ul class="nav nav-pills nav-stacked">
 				<li><a href="#" data-toggle="modal" data-target="#newMessageModal"><span class="glyphicon glyphicon-envelope"></span> Nouveau message</a></li>
@@ -36,25 +51,25 @@ if(request.getParameter("sub") !=null) {
 							<div class="form-group">
 								<label for="userTo" class="col-sm-3 control-label">Destinataire</label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="userTo" placeholder="Nom d'utilisateur du destinataire" />
+									<input type="text" class="form-control" id="userTo" placeholder="Nom d'utilisateur du destinataire" value="<%=newMessageTo%>" required/>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="subjectTo" class="col-sm-3 control-label">Sujet</label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="subjectTo" placeholder="Sujet du message" />
+									<input type="text" class="form-control" id="subjectTo" placeholder="Sujet du message" required/>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="messageTo" class="col-sm-3 control-label">Message</label>
 								<div class="col-sm-9">
-									<textarea class="form-control" rows="10" id="messageTo" placeholder="Entrez votre message"></textarea>
+									<textarea class="form-control" rows="10" id="messageTo" placeholder="Entrez votre message" required></textarea>
 								</div>
 							</div>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-							<button type="button" class="btn btn-info">Envoyer</button>
+							<button type="submit" class="btn btn-info">Envoyer</button>
 						</div>
 					</form>
 				</div>
